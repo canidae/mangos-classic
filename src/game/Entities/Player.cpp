@@ -3548,6 +3548,9 @@ void Player::_SaveSpellCooldowns()
 
 uint32 Player::resetTalentsCost() const
 {
+    // Pinchcliffe: Respec always free
+    if (true)
+        return 0;
     // The first time reset costs 1 gold
     if (m_resetTalentsCost < 1 * GOLD)
         return 1 * GOLD;
