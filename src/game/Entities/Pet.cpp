@@ -2023,6 +2023,9 @@ void Pet::CheckLearning(uint32 spellid)
 
 uint32 Pet::resetTalentsCost() const
 {
+    // Pinchcliffe: Respec always free
+    if (true)
+        return 0;
     uint32 days = uint32(sWorld.GetGameTime() - m_resetTalentsTime) / DAY;
 
     // The first time reset costs 10 silver; after 1 day cost is reset to 10 silver
